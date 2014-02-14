@@ -1,0 +1,30 @@
+from enum import Enum
+
+class Note(Enum):
+	c = 0
+	db= 1
+	d = 2
+	eb= 3
+	e = 4
+	f = 5
+	gb= 6
+	g = 7
+	ab= 8
+	a = 9
+	bb= 10
+	b = 11
+
+class Melody:
+
+	def __init__(self):
+		self.notes = []
+		self.key = Note.c;
+		
+	def changeKeyButKeepNotesFixed(self, newKey):
+		keyChange = self.key - newKey
+		for note in self.notes:
+			
+		
+	def printNotes(self):
+		for note in self.notes:
+			
