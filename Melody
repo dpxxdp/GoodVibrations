@@ -1,30 +1,37 @@
 from enum import Enum
 
-class Note(Enum):
-	c = 0
-	db= 1
-	d = 2
-	eb= 3
-	e = 4
-	f = 5
-	gb= 6
-	g = 7
-	ab= 8
-	a = 9
-	bb= 10
-	b = 11
+
+class Note:
+	def __init__(self):
+		note = 0
+
+
+
+
 
 class Melody:
 
 	def __init__(self):
-		self.notes = []
-		self.key = Note.c;
+		self.notes = []				#note 0 = baseNote in pitch space
+		self.baseNote = 0
 		
-	def changeKeyButKeepNotesFixed(self, newKey):
-		keyChange = self.key - newKey
+	def Key(self):
+		""""the baseNote in pitch space converted into the key in pitch class space(C=0)"""
+		return (self.baseNote + 9)%12
+		
+	def NotesInPitchSpace(self):
+		pitchSpaceNotes = []
+		for note in self.notes:
+			pitchSpaceNotes.append(note + self.baseNote)
+		return pitchSpaceNotes
+			
+	def NotesInPitchClassSpace(self):
+		pitchClassSpaceNotes = []
+		pitchSpaceNotes = self.NotesInPitchSpace
+		for note in pitchSpaceNotes:
+			
+	
+	def PrintNotes(self):
 		for note in self.notes:
 			
-		
-	def printNotes(self):
-		for note in self.notes:
-			
+	
