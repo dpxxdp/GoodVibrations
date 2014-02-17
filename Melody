@@ -13,7 +13,7 @@ class Melody:
 
 	def __init__(self):
 		self.notes = []				#note 0 = baseNote in pitch space
-		self.baseNote = 0
+		self.baseNote = 0			#in pitchSpace. 0 corresponds with A0 on standard piano
 		
 	def Key(self):
 		""""the baseNote in pitch space converted into the key in pitch class space(C=0)"""
