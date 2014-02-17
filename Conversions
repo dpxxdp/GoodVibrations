@@ -1,0 +1,32 @@
+
+
+def PitchSpaceToPitchClassSpace(oldNotes):
+	newNotes = []
+	for note in oldNotes:
+		newNotes.append((oldNote-9)%12)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
