@@ -1,9 +1,17 @@
+import math
 
+def PitchSpaceToPitchClassSpace(psNotes):
+	"""takes an array of psNotes (any integer) and converts them into pcsNotes (integers 0-12)
+	pcsNotes = []
+	for note in psNotes:
+		pcs.append(note%12)
+	return pcsNotes
+	
 
-def PitchSpaceToPitchClassSpace(oldNotes):
-	newNotes = []
-	for note in oldNotes:
-		newNotes.append((oldNote-9)%12)
+def PitchClassSpaceToKey(pcsNotes):
+	keyAsChar = 
+	
+		
 
 
 
